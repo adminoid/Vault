@@ -17,6 +17,7 @@ package com.github.adminoid;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Collection;
@@ -24,36 +25,36 @@ import java.util.concurrent.Callable;
 import java.util.logging.Logger;
 
 import com.github.adminoid.vault.chat.Chat;
-import com.github.adminoid.vault.chat.plugins.Chat_DroxPerms;
-import com.github.adminoid.vault.chat.plugins.Chat_GroupManager;
-import com.github.adminoid.vault.chat.plugins.Chat_OverPermissions;
-import com.github.adminoid.vault.chat.plugins.Chat_Permissions3;
-import com.github.adminoid.vault.chat.plugins.Chat_PermissionsEx;
-import com.github.adminoid.vault.chat.plugins.Chat_Privileges;
-import com.github.adminoid.vault.chat.plugins.Chat_bPermissions;
-import com.github.adminoid.vault.chat.plugins.Chat_bPermissions2;
-import com.github.adminoid.vault.chat.plugins.Chat_iChat;
-import com.github.adminoid.vault.chat.plugins.Chat_mChat;
-import com.github.adminoid.vault.chat.plugins.Chat_mChatSuite;
-import com.github.adminoid.vault.chat.plugins.Chat_rscPermissions;
+import com.github.adminoid.chat.plugins.Chat_DroxPerms;
+import com.github.adminoid.chat.plugins.Chat_GroupManager;
+import com.github.adminoid.chat.plugins.Chat_OverPermissions;
+import com.github.adminoid.chat.plugins.Chat_Permissions3;
+import com.github.adminoid.chat.plugins.Chat_PermissionsEx;
+import com.github.adminoid.chat.plugins.Chat_Privileges;
+import com.github.adminoid.chat.plugins.Chat_bPermissions;
+import com.github.adminoid.chat.plugins.Chat_bPermissions2;
+import com.github.adminoid.chat.plugins.Chat_iChat;
+import com.github.adminoid.chat.plugins.Chat_mChat;
+import com.github.adminoid.chat.plugins.Chat_mChatSuite;
+import com.github.adminoid.chat.plugins.Chat_rscPermissions;
 import com.github.adminoid.vault.economy.Economy;
 import com.github.adminoid.vault.permission.Permission;
-import com.github.adminoid.vault.permission.plugins.Permission_DroxPerms;
-import com.github.adminoid.vault.permission.plugins.Permission_GroupManager;
-import com.github.adminoid.vault.permission.plugins.Permission_OverPermissions;
-import com.github.adminoid.vault.permission.plugins.Permission_Permissions3;
-import com.github.adminoid.vault.permission.plugins.Permission_PermissionsBukkit;
-import com.github.adminoid.vault.permission.plugins.Permission_PermissionsEx;
-import com.github.adminoid.vault.permission.plugins.Permission_Privileges;
-import com.github.adminoid.vault.permission.plugins.Permission_SimplyPerms;
-import com.github.adminoid.vault.permission.plugins.Permission_Starburst;
-import com.github.adminoid.vault.permission.plugins.Permission_SuperPerms;
-import com.github.adminoid.vault.permission.plugins.Permission_Xperms;
-import com.github.adminoid.vault.permission.plugins.Permission_bPermissions;
-import com.github.adminoid.vault.permission.plugins.Permission_bPermissions2;
-import com.github.adminoid.vault.permission.plugins.Permission_TotalPermissions;
-import com.github.adminoid.vault.permission.plugins.Permission_rscPermissions;
-import com.github.adminoid.vault.permission.plugins.Permission_KPerms;
+import com.github.adminoid.permission.plugins.Permission_DroxPerms;
+import com.github.adminoid.permission.plugins.Permission_GroupManager;
+import com.github.adminoid.permission.plugins.Permission_OverPermissions;
+import com.github.adminoid.permission.plugins.Permission_Permissions3;
+import com.github.adminoid.permission.plugins.Permission_PermissionsBukkit;
+import com.github.adminoid.permission.plugins.Permission_PermissionsEx;
+import com.github.adminoid.permission.plugins.Permission_Privileges;
+import com.github.adminoid.permission.plugins.Permission_SimplyPerms;
+import com.github.adminoid.permission.plugins.Permission_Starburst;
+import com.github.adminoid.permission.plugins.Permission_SuperPerms;
+import com.github.adminoid.permission.plugins.Permission_Xperms;
+import com.github.adminoid.permission.plugins.Permission_bPermissions;
+import com.github.adminoid.permission.plugins.Permission_bPermissions2;
+import com.github.adminoid.permission.plugins.Permission_TotalPermissions;
+import com.github.adminoid.permission.plugins.Permission_rscPermissions;
+import com.github.adminoid.permission.plugins.Permission_KPerms;
 
 import org.bstats.bukkit.Metrics;
 import org.bstats.charts.SimplePie;
@@ -76,7 +77,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
-import com.github.adminoid.vault.chat.plugins.Chat_TotalPermissions;
+import com.github.adminoid.chat.plugins.Chat_TotalPermissions;
 
 public class Vault extends JavaPlugin {
 
@@ -350,11 +351,11 @@ public class Vault extends JavaPlugin {
                     continue;
                 }
                 econ2.createPlayerAccount(op);
-                double diff = econ1.getBalance(op).subtract(econ2.getBalance(op));
-                if (diff > 0) {
+                BigDecimal diff = econ1.getBalance(op).subtract(econ2.getBalance(op));
+                if (diff.signum() > 0) {
                 	econ2.depositPlayer(op, diff);
-                } else if (diff < 0) {
-                	econ2.withdrawPlayer(op, -diff);
+                } else if (diff.signum() < 0) {
+                	econ2.withdrawPlayer(op, diff);
                 }
                 
             }
