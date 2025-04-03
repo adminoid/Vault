@@ -13,7 +13,7 @@
     You should have received a copy of the GNU Lesser General Public License
     along with Vault.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.milkbowl.vault.permission.plugins;
+package com.github.adminoid.vault.permission.plugins;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -34,7 +34,7 @@ import org.bukkit.event.server.PluginDisableEvent;
 import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.plugin.Plugin;
 
-import net.milkbowl.vault.permission.Permission;
+import com.github.adminoid.vault.permission.Permission;
 
 public class Permission_GroupManager extends Permission {
 

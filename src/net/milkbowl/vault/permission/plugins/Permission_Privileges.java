@@ -1,8 +1,8 @@
-package net.milkbowl.vault.permission.plugins;
+package com.github.adminoid.vault.permission.plugins;
 
 import net.krinsoft.privileges.Privileges;
 import net.krinsoft.privileges.groups.Group;
-import net.milkbowl.vault.permission.Permission;
+import com.github.adminoid.vault.permission.Permission;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;

@@ -13,7 +13,7 @@
  You should have received a copy of the GNU Lesser General Public License
  along with Vault.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.milkbowl.vault.permission.plugins;
+package com.github.adminoid.vault.permission.plugins;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ import net.ae97.totalpermissions.PermissionManager;
 import net.ae97.totalpermissions.TotalPermissions;
 import net.ae97.totalpermissions.permission.PermissionBase;
 import net.ae97.totalpermissions.permission.PermissionUser;
-import net.milkbowl.vault.permission.Permission;
+import com.github.adminoid.vault.permission.Permission;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
