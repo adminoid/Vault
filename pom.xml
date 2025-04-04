@@ -12,7 +12,7 @@
 	<!-- Project information -->
 	<groupId>com.github.adminoid.vault</groupId>
 	<artifactId>Vault</artifactId>
-	<version>${api.version}.4</version>
+	<version>${api.version}.8</version>
 	<name>Vault</name>
 	<url>https://dev.bukkit.org/projects/vault</url>
 	<description>Vault is a Chat, Permissions &amp; Economy API to allow plugins to more easily hook into these systems without needing to hook each individual system themselves.</description>
