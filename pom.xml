@@ -10,7 +10,7 @@
 	</properties>
 
 	<!-- Project information -->
-	<groupId>net.milkbowl.vault</groupId>
+	<groupId>com.github.adminoid.vault</groupId>
 	<artifactId>Vault</artifactId>
 	<version>${api.version}.3</version>
 	<name>Vault</name>
@@ -21,19 +21,19 @@
 
 	<!-- Organization -->
 	<organization>
-		<name>MilkBowl</name>
-		<url>https://github.com/MilkBowl/Vault</url>
+		<name>adminoid</name>
+		<url>https://github.com/adminoid/Vault</url>
 	</organization>
 
 	<scm>
-		<url>https://github.com/MilkBowl/Vault</url>
-		<connection>scm:git:git://github.com:MilkBowl/Vault.git</connection>
-		<developerConnection>scm:git:git@github.com:MilkBowl/Vault.git</developerConnection>
+		<url>https://github.com/adminoid/Vault</url>
+		<connection>scm:git:git://github.com:adminoid/Vault.git</connection>
+		<developerConnection>scm:git:git@github.com:adminoid/Vault.git</developerConnection>
 	</scm>
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/MilkBowl/Vault/issues</url>
+		<url>https://github.com/adminoid/Vault/issues</url>
 	</issueManagement>
 
 	<distributionManagement>
@@ -76,7 +76,7 @@
 			<version>${bukkitVersion}</version>
 		</dependency>
 		<dependency>
-			<groupId>net.milkbowl.vault</groupId>
+			<groupId>com.github.adminoid.vault</groupId>
 			<artifactId>VaultAPI</artifactId>
 			<version>${api.version}</version>
 		</dependency>
@@ -269,14 +269,14 @@
 					<createDependencyReducedPom>false</createDependencyReducedPom>
 					<artifactSet>
 						<includes>
-							<include>net.milkbowl.vault:VaultAPI</include>
+							<include>com.github.adminoid.vault:VaultAPI</include>
 							<include>org.bstats</include>
 						</includes>
 					</artifactSet>
 					<relocations>
 						<relocation>
 							<pattern>org.bstats</pattern>
-							<shadedPattern>net.milkbowl.vault.metrics</shadedPattern>
+							<shadedPattern>com.github.adminoid.vault.metrics</shadedPattern>
 						</relocation>
 					</relocations>
 				</configuration>

@@ -45,7 +45,7 @@
 	
   <target name="javadoc" description="Generate JavaDoc">
   	<delete dir="/var/www/javadoc/vault" includes="**/*" failonerror="false" />
-	<javadoc packagenames="net.milkbowl.vault.economy,net.milkbowl.vault.permission,net.milkbowl.vault.chat,net.milkbowl.vault.item"
+	<javadoc packagenames="com.github.adminoid.vault.economy,com.github.adminoid.vault.permission,com.github.adminoid.vault.chat,com.github.adminoid.vault.item"
 			sourcepath="src"
 			destdir="/var/www/javadoc/vault"
 			access="public"

@@ -13,9 +13,9 @@
     You should have received a copy of the GNU Lesser General Public License
     along with Vault.  If not, see <http://www.gnu.org/licenses/>.
  */
-package net.milkbowl.vault.permission.plugins;
+package com.github.adminoid.vault.permission.plugins;
 
-import net.milkbowl.vault.permission.Permission;
+import com.github.adminoid.vault.permission.Permission;
 
 import com.github.sebc722.xperms.core.Main;
 

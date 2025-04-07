@@ -14,7 +14,7 @@
     along with Vault.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.milkbowl.vault.permission.plugins;
+package com.github.adminoid.vault.permission.plugins;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.Map;
 
 import net.crystalyx.bukkit.simplyperms.SimplyAPI;
 import net.crystalyx.bukkit.simplyperms.SimplyPlugin;
-import net.milkbowl.vault.permission.Permission;
+import com.github.adminoid.vault.permission.Permission;
 
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
