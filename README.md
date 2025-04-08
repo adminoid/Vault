@@ -1,7 +1,10 @@
-# Vault - Abstraction Library for Bukkit - [![Build Status](https://app.travis-ci.com/MilkBowl/Vault.svg?branch=master)](https://app.travis-ci.com/MilkBowl/Vault)
+# Vault - Abstraction Library for Bukkit - [![Build Status](https://app.travis-ci.com/adminoid/Vault.svg?branch=master)](https://app.travis-ci.com/adminoid/Vault)
+
+## Build
+`./.utility/build.sh`
 
 ## For Developers:
-Please see the [VaultAPI](https://www.github.com/MilkBowl/VaultAPI) page for
+Please see the [VaultAPI](https://www.github.com/adminoid/VaultAPI) page for
 information on developing with Vault's API. In the past, you would use the same
 artifact as servers installed, but the API has now been split from the main
 project and is under a different artifact name. Please make sure you accommodate
@@ -13,7 +16,6 @@ Installing Vault is as simple as copying the provided "Vault.jar" to your
 wish to perform configuration changes, this can be done via a configuration
 file but should not be necessary in most cases. See the "Advanced
 Configuration" section for more information.
-
 
 ## Why Vault?
 I have no preference which library suits your plugin and development efforts
