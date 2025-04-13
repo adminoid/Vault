@@ -352,12 +352,11 @@ public class Vault extends JavaPlugin {
                 }
                 econ2.createPlayerAccount(op);
                 BigDecimal diff = econ1.getBalance(op).subtract(econ2.getBalance(op));
-                if (diff.signum() > 0) {
-                	econ2.depositPlayer(op, diff);
-                } else if (diff.signum() < 0) {
-                	econ2.withdrawPlayer(op, diff);
+                if (diff.compareTo(BigDecimal.ZERO) > 0) {
+                    econ2.depositPlayer(op, diff);
+                } else if (diff.compareTo(BigDecimal.ZERO) < 0) {
+                    econ2.withdrawPlayer(op, diff);
                 }
-                
             }
         }
         sender.sendMessage("Converson complete, please verify the data before using it.");
